@@ -1,0 +1,33 @@
+a {
+  text-decoration: none;
+}
+
+main a {
+  display: inline-block;
+  border-radius: 2px;
+  color: #648f52;
+  background: #191919;
+  transition: 0.2s all ease;
+  padding: 0 0.25em;
+}
+main a :hover {
+  color: #191919;
+  background: #648f52;
+}
+
+body {
+  background: #191919;
+}
+
+details summary {
+  display: flex;
+  align-items: center;
+}
+details summary > i {
+  font-size: 1.25em;
+  margin-right: 0.7em;
+  transition: 0.17s transform ease;
+}
+details[open] i {
+  transform: rotate(90deg);
+}

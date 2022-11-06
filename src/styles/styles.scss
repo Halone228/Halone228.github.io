@@ -1,0 +1,46 @@
+$bg-dark: #191919;
+
+$link-text: #648f52;
+$link-text-hover: #71c052;
+
+a {
+    text-decoration: none;
+}
+main a {
+    display: inline-block;
+    border-radius: 2px;
+
+    color: $link-text;
+    background: $bg-dark;
+    transition: .2s all ease;
+
+    padding: 0 .25em;
+
+    :hover{
+        color: $bg-dark;
+        background: $link-text;
+    }
+}
+
+body {
+    background: $bg-dark;
+}
+
+details{
+    summary{
+        display: flex;
+        align-items: center;
+    
+        > i{
+            font-size: 1.25em;
+            margin-right: .7em;
+            transition: .17s transform ease;
+        }
+    }
+
+    &[open]{
+        i {
+            transform: rotate(90deg);
+        }
+    }
+}
