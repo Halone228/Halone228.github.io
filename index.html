@@ -11,11 +11,19 @@
     <link rel="stylesheet" href="src/styles/styles.css">
 
     <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <script defer src="src/scripts/get_raw.js"></script>
 
     <title> Gen. Algorithm </title>
 </head>
-<body class="pt-5">
-    
+<body>
+
+    <div id="background">
+        <div class="circle green little shadow a-spin wide-x" style="left:35%; top: 20%"></div>
+        <div class="star" style="left:70%; top:7%"></div>
+        <div class="circle dark-green"></div>
+    </div>
+
+
     <nav class="navbar navbar-dark navbar-expand-md fixed-top " style="background: #1f281b;">
         <div class="container d-flex justify-content-between">
             <a class="navbar-brand" href="#"> Gen. Algorithm </a>
@@ -38,8 +46,15 @@
         </div>
     </nav>
 
-    <main class="container mt-5 text-light">
+
+    
+
+
+    <main class="container mt-5 pt-5 text-light">
         
+        <h1 class="text-center w-100 mb-5"> Введение </h1>
+
+
         <section class="container-fluid p-1 p-md-0 d-flex flex-column flex-lg-row align-items-stretch justify-content-center" id="section1">
             <div class="container">
                 <h1 class="mb-4 text-center"> Основные понятия </h1>
@@ -77,8 +92,9 @@
             <div class="container d-flex justify-content-center justify-content-lg-end align-items-center">
                 <img src="src/imgs/ga-scheme.png" alt="ga-scheme" class="rounded-2 mw-100" style="background: #CED8CA; width: fit-content; height: fit-content;">
             </div>
-        </section>
 
+            <div onload="()=>{get_file('https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py', this)}"></div>
+        </section>
     </main>
 
 </body>

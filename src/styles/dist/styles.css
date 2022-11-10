@@ -11,10 +11,9 @@ main a {
   border-radius: 2px;
   color: #648f52;
   background: #191919;
-  transition: .2s all ease;
-  padding: 0 .25em;
+  transition: 0.2s all ease;
+  padding: 0 0.25em;
 }
-
 main a :hover {
   color: #191919;
   background: #648f52;
@@ -28,13 +27,11 @@ details summary {
   display: flex;
   align-items: center;
 }
-
 details summary > i {
   font-size: 1.25em;
-  margin-right: .7em;
-  transition: .17s transform ease;
+  margin-right: 0.7em;
+  transition: 0.17s transform ease;
 }
-
 details[open] i {
   transform: rotate(90deg);
 }
@@ -50,7 +47,6 @@ details[open] i {
     transform: rotate(360deg) scaleX(0.7);
   }
 }
-
 #background {
   position: fixed;
   width: 100vw;
@@ -62,7 +58,6 @@ details[open] i {
   filter: blur(13px);
   transition: 1s all ease;
 }
-
 #background > .circle {
   transform: none;
   width: 0;
@@ -73,42 +68,33 @@ details[open] i {
   left: 0;
   top: 0;
 }
-
 #background > .circle.a-spin {
   animation: spin 20s infinite linear;
 }
-
 #background > .circle.little {
   width: 23rem;
   height: 23rem;
   font-size: 4em;
 }
-
 #background > .circle.big {
   width: 50vw;
   height: 50vh;
 }
-
 #background > .circle.green {
   background: #308110;
 }
-
 #background > .circle.dark-green {
   background: #308110;
 }
-
 #background > .circle.compr-x {
   transform: scaleX(0.7);
 }
-
 #background > .circle.compr-y {
   transform: scaleY(0.6);
 }
-
 #background > .circle.wide-x {
   transform: scaleX(1.7);
 }
-
 #background > .circle.wide-y {
   transform: scaleY(1.7);
 }
@@ -120,31 +106,29 @@ details[open] i {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: .9em;
-  margin-right: .9em;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
   margin-bottom: 1.2em;
-  border-right: .3em solid transparent;
+  border-right: 0.3em solid transparent;
   border-bottom: 0.7em solid #648f52;
-  border-left: .3em solid transparent;
+  border-left: 0.3em solid transparent;
   font-size: 15em;
   filter: blur(30px);
   transform: rotate(35deg);
 }
-
 .star:before, .star:after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 0;
   position: absolute;
-  top: .6em;
+  top: 0.6em;
   left: -1em;
   border-right: 1em solid transparent;
   border-bottom: 0.7em solid #648f52;
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
-
 .star:after {
   transform: rotate(35deg);
 }

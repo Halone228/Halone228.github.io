@@ -3,8 +3,14 @@ $bg-dark: #191919;
 $link-text: #648f52;
 $link-text-hover: #71c052;
 
+$bg-green: #3cad0f;
+$bg-green: #308110;
+
 a {
     text-decoration: none;
+}
+main{
+    z-index: 1;
 }
 main a {
     display: inline-block;
@@ -42,5 +48,125 @@ details{
         i {
             transform: rotate(90deg);
         }
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg) scaleX(.7);
+    }
+    50%{
+        transform: rotate(180deg) scaleX(.7);
+    }
+    to{
+        transform: rotate(360deg) scaleX(.7);
+    }
+}
+
+#background{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $bg-dark;
+    filter: blur(13px);
+    transition: 1s all ease;
+
+    > .circle{
+        transform: none;
+        width: 0;
+        height: 0;
+        transition: inherit;
+
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &.a-spin{
+            animation: spin 20s infinite linear;
+        }
+        
+        &.little{
+            width: 23rem;
+            height: 23rem;
+            font-size: 4em;
+        }
+        &.big{
+            
+            width: 50vw;
+            height: 50vh;
+        }
+        
+        &.green{
+            background: $bg-green;
+        }
+        &.dark-green{
+            background: $bg-green;
+        }
+
+        &.compr-x{
+            transform: scaleX(.7);
+        }
+        &.compr-y{
+            transform: scaleY(.6);
+        }
+
+        &.wide-x{
+            transform: scaleX(1.7);
+        }
+        &.wide-y{
+            transform: scaleY(1.7);
+        }
+    }
+
+
+}
+
+
+
+.star {
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid $link-text;
+    border-left:   .3em solid transparent;
+  
+    font-size: 15em;
+    filter: blur(30px);
+    transform: rotate(35deg);
+    
+    &:before, &:after {
+        content: '';
+        
+        display: block;
+        width: 0;
+        height: 0;
+        
+        position: absolute;
+        top: .6em;
+        left: -1em;
+
+        border-right:  1em solid transparent;
+        border-bottom: .7em  solid $link-text;
+        border-left:   1em solid transparent;
+
+        transform: rotate(-35deg);
+    }
+    
+    &:after {  
+      transform: rotate(35deg);
     }
 }

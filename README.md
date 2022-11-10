@@ -30,3 +30,5 @@
 
 Также методы iter и draw 
 <-- https://github.com/Halone228/GeneticAlgorithm/blob/130f125743cd2aa30cb616f2af16209048ab49e4/simul/\_\_init__.py#L104 https://github.com/Halone228/GeneticAlgorithm/blob/130f125743cd2aa30cb616f2af16209048ab49e4/simul/\_\_init__.py#L93 -->
+
+Эти методы отвечают за итерацию программного цикла, обработку нажатий, а также за отрисовку на окне, а также обновление физического пространства 
