@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="src/styles/styles.css">
 
     <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
-    <script defer src="src/scripts/get_raw.js"></script>
-
+    <script src="src/scripts/get_raw.js"></script>
+    <script src="src/scripts/drone.js" defer></script>
     <title> Gen. Algorithm </title>
 </head>
 <body>
 
     <div id="background">
-        <div class="circle green little shadow a-spin wide-x" style="left:35%; top: 20%"></div>
+        <div class="circle green little shadow a-spin wide-x" style="left:30%; top: 17%"></div>
         <div class="star" style="left:70%; top:7%"></div>
-        <div class="circle dark-green"></div>
+        <div class="circle dark-green big" style="left: -50%; bottom: -116%;"></div>
+        <img src="src/imgs/drone.svg" alt="drone" id="drone">
     </div>
 
 
@@ -92,10 +93,22 @@
             <div class="container d-flex justify-content-center justify-content-lg-end align-items-center">
                 <img src="src/imgs/ga-scheme.png" alt="ga-scheme" class="rounded-2 mw-100" style="background: #CED8CA; width: fit-content; height: fit-content;">
             </div>
-
-            <pre class="code-block" onload="()=>{get_file('https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py', this)}"></pre>
         </section>
+        <h2 class="h2">Изучение используемых модулей</h2>
+        <p>
+            В работе мы использовали 3 основых модуля <a href="https://www.pymunk.org/en/latest/">Pymunk</a>, 
+            <a href="https://pygad.readthedocs.io/en/latest/">PyGAD</a> и 
+            <a href="https://www.pygame.org/">PyGame </a> 
+        </p>
+        <p>
+            Начали написание кода с объекта нашего приложения
+        </p>
+        <label for="__init__">Код __init__.py</label>
+        <pre class="code-block bg-dark rounded-3 p-2" id="__init__" style="height: 50vh;" data-file-link="https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py">loading...</pre>
+        <p>
+            Рассмотри метод __init__ который будет отвечать за инициализацию нашего приложения
+        </p>
     </main>
-
+    <script async src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-codehighlight@1/codehighlight.js"></script>
 </body>
 </html>

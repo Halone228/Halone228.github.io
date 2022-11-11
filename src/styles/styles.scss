@@ -1,10 +1,10 @@
 $bg-dark: #191919;
 
 $link-text: #648f52;
-$link-text-hover: #71c052;
+$link-text-hover: #50a130;
 
-$bg-green: #3cad0f;
-$bg-green: #308110;
+$bg-green: #2d8809;
+$bg-green-dark: #1d5308;
 
 a {
     text-decoration: none;
@@ -27,6 +27,7 @@ main a {
         background: $link-text;
     }
 }
+
 
 body {
     background: $bg-dark;
@@ -82,8 +83,6 @@ details{
 
         border-radius: 50%;
         position: absolute;
-        left: 0;
-        top: 0;
 
         &.a-spin{
             animation: spin 20s infinite linear;
@@ -95,16 +94,15 @@ details{
             font-size: 4em;
         }
         &.big{
-            
-            width: 50vw;
-            height: 50vh;
+            width: 100rem;
+            height: 100rem;
         }
         
         &.green{
             background: $bg-green;
         }
         &.dark-green{
-            background: $bg-green;
+            background: $bg-green-dark;
         }
 
         &.compr-x{
@@ -122,10 +120,34 @@ details{
         }
     }
 
-
+    > #drone{
+        position: absolute;
+        transition: 3s all ease;
+        transition-delay: .4s;
+        height: 3em;
+        transition-timing-function:cubic-bezier(.38,.5,.14,1.06);
+    }
 }
 
+pre::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	background-color: #444444;
+}
 
+pre::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+pre::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+	background-color: $link-text-hover;
+    border: 5px solid transparent;
+	background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent)
+}
 
 .star {
     position: absolute;

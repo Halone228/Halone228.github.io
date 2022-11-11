@@ -11,10 +11,9 @@ main a {
   border-radius: 2px;
   color: #648f52;
   background: #191919;
-  transition: .2s all ease;
-  padding: 0 .25em;
+  transition: 0.2s all ease;
+  padding: 0 0.25em;
 }
-
 main a :hover {
   color: #191919;
   background: #648f52;
@@ -28,15 +27,25 @@ details summary {
   display: flex;
   align-items: center;
 }
-
 details summary > i {
   font-size: 1.25em;
-  margin-right: .7em;
-  transition: .17s transform ease;
+  margin-right: 0.7em;
+  transition: 0.17s transform ease;
 }
-
 details[open] i {
   transform: rotate(90deg);
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg) scaleX(0.7);
+  }
+  50% {
+    transform: rotate(180deg) scaleX(0.7);
+  }
+  to {
+    transform: rotate(360deg) scaleX(0.7);
+  }
 }
 
 @keyframes spin {
@@ -50,7 +59,6 @@ details[open] i {
     transform: rotate(360deg) scaleX(0.7);
   }
 }
-
 #background {
   position: fixed;
   width: 100vw;
@@ -62,7 +70,6 @@ details[open] i {
   filter: blur(13px);
   transition: 1s all ease;
 }
-
 #background > .circle {
   transform: none;
   width: 0;
@@ -70,47 +77,61 @@ details[open] i {
   transition: inherit;
   border-radius: 50%;
   position: absolute;
-  left: 0;
-  top: 0;
 }
-
 #background > .circle.a-spin {
-  animation: spin 20s infinite linear;
+  -webkit-animation: spin 20s infinite linear;
+          animation: spin 20s infinite linear;
 }
-
 #background > .circle.little {
   width: 23rem;
   height: 23rem;
   font-size: 4em;
 }
-
 #background > .circle.big {
-  width: 50vw;
-  height: 50vh;
+  width: 100rem;
+  height: 100rem;
 }
-
 #background > .circle.green {
-  background: #308110;
+  background: #2d8809;
 }
-
 #background > .circle.dark-green {
-  background: #308110;
+  background: #1d5308;
 }
-
 #background > .circle.compr-x {
   transform: scaleX(0.7);
 }
-
 #background > .circle.compr-y {
   transform: scaleY(0.6);
 }
-
 #background > .circle.wide-x {
   transform: scaleX(1.7);
 }
-
 #background > .circle.wide-y {
   transform: scaleY(1.7);
+}
+#background > #drone {
+  position: absolute;
+  transition: 3s all ease;
+  transition-delay: 0.4s;
+  height: 3em;
+  transition-timing-function: cubic-bezier(0.38, 0.5, 0.14, 1.06);
+}
+
+pre::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+  background-color: #444444;
+}
+
+pre::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+pre::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #50a130;
+  border: 5px solid transparent;
+  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent);
 }
 
 .star {
@@ -120,31 +141,29 @@ details[open] i {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: .9em;
-  margin-right: .9em;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
   margin-bottom: 1.2em;
-  border-right: .3em solid transparent;
+  border-right: 0.3em solid transparent;
   border-bottom: 0.7em solid #648f52;
-  border-left: .3em solid transparent;
+  border-left: 0.3em solid transparent;
   font-size: 15em;
   filter: blur(30px);
   transform: rotate(35deg);
 }
-
 .star:before, .star:after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 0;
   position: absolute;
-  top: .6em;
+  top: 0.6em;
   left: -1em;
   border-right: 1em solid transparent;
   border-bottom: 0.7em solid #648f52;
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
-
 .star:after {
   transform: rotate(35deg);
-}
+}/*# sourceMappingURL=styles.css.map */
