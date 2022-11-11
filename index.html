@@ -8,8 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
     
-    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/base16/solarized-dark.css">
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/base16/windows-high-contrast.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/0c12bb8f67.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="src/styles/styles.css">
 
@@ -24,7 +30,10 @@
         <div class="circle green little shadow a-spin wide-x" style="left:30%; top: 17%"></div>
         <div class="star" style="left:70%; top:7%"></div>
         <div class="circle dark-green big" style="left: -50%; bottom: -116%;"></div>
-        <img src="src/imgs/drone.svg" alt="drone" id="drone">
+        <img src="src/imgs/drone.svg" alt="drone" class="drone">
+        <img src="src/imgs/drone.svg" alt="drone" class="drone">
+        <img src="src/imgs/drone.svg" alt="drone" class="drone">
+        <img src="src/imgs/drone.svg" alt="drone" class="drone">
     </div>
 
 
@@ -37,32 +46,67 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav">
                     <div class="nav-item">
+                        <a class="nav-link" href="#introduction"> Введение </a>
+                    </div>
+                    <div class="nav-item">
                         <a class="nav-link" href="#section1"> Основные понятия </a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="#"> l2 </a>
-                    </div>
-                    <div class="nav-item">
-                        <a class="nav-link" href="#"> l3 </a>
+                        <a class="nav-link" href="#modules"> Используемые модули </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-
-
-    
-
-
-    <main class="container mt-5 pt-5 text-light">
+    <main class="container mt-5 pt-5 text-light fs-3">
         
-        <h1 class="text-center w-100 mb-5"> Введение </h1>
+        <section>
+            <h1 class="text-center w-100 mb-5" id="introduction"> Введение </h1>
+            <p class="lh-sm">
+                В XXI веке появились обучаемые искусственные интеллекты (далее - ИИ). 
+                Пообщаться, допустим, с голосовым помощником для современного человека - это уже обыденность. 
+                Число ИИ для разных сфер растёт в геометрической прогрессии. 
+                Роботы с искусственным интеллектом учатся ходить по пересеченной местности, 
+                разрабатывают наиболее эффективную архитектуру для процессоров, 
+                ездят на дорогах городов вместо человека, улучшают качество жизни человека.
+            </p>
+            <p class="lh-sm">
+                Используя ИИ, обычный пользователь чаще всего не задумывается, какие фундаментальные принципы, 
+                алгоритмы и технологии заложены в его основу. Нам же стало интересно, как это работает?
+            </p>
 
+            <p class="lh-sm">
+                Мы, <a href="https://github.com/readyyyk"> Влад </a> и <a href="https://github.com/Halone228"> Кирилл </a>, задумались, что лежит в основе ИИ. 
+                Мы узнали что самыми популярными технологиями, которые используются в Machine Learning(ML), 
+                являются нейросети. Мы решили копнуть глубже и узнали о существовании <i><b>Генетических алгоритмов</b></i>
+            </p>
+            <div class="row w-100">
+                <div class="col-6 d-flex justify-content-center">
+                    <a href="https://github.com/readyyyk" class="p-3 text-center" style="width: fit-content;">
+                        <img class="rounded-circle overflow-hidden mb-3" src="https://avatars.githubusercontent.com/u/78100125?v=4" style="height: 7em; width: auto;"> <br>
+                        <span> @readyyyk </span>
+                    </a>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <a href="https://github.com/Halone228" class="p-2 text-center" style="width: fit-content;">
+                        <img class="rounded-circle overflow-hidden mb-3" src="https://avatars.githubusercontent.com/u/75622442?v=4" style="height: 7em; width: auto;"> <br>
+                        <span> @Halone228 </span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <section class="container-fluid p-1 p-md-0 d-flex flex-column flex-lg-row align-items-stretch justify-content-center" id="section1">
-            <div class="container">
-                <h1 class="mb-4 text-center"> Основные понятия </h1>
-                <ul class="list-group mb-4 text-start me-0 me-lg-3">
+        <section class="container-fluid p-1 p-md-0 flex-lg-row align-items-stretch justify-content-center" id="section1">
+            <h1 class="mb-4 text-center"> Основные понятия </h1>
+            <p class="lh-sm defenition rounded-3">
+                <b><a href="https://ru.wikipedia.org/wiki/Генетический_алгоритм">Генетический алгоритм</a></b>— это <a href="https://ru.wikipedia.org/wiki/Эвристический_алгоритм" title="Эвристический алгоритм">эвристический алгоритм</a> поиска,
+                используемый для решения задач оптимизации и моделирования путём случайного подбора, 
+                комбинирования и вариации искомых параметров с использованием механизмов, 
+                аналогичных естественному отбору в природе. Является разновидностью <a href="https://ru.wikipedia.org/wiki/Эволюционные_алгоритмы" title="Эволюционные вычисления">эволюционных вычислений</a>, 
+                с помощью которых решаются оптимизационные задачи с использованием методов естественной эволюции, таких как наследование, мутации, отбор и кроссинговер.
+            <p>
+            <div class="container d-flex justify-content-center align-items-center">
+                <ul class="list-group mb-4 text-start me-0 me-lg-3 w-100">
                     <li class="list-group-item" style="background: #B7D9B1;">
                         <details>
                             <summary> 
@@ -92,30 +136,61 @@
                         </details>
                     </li>
                 </ul>
-            </div>
-            <div class="container d-flex justify-content-center justify-content-lg-end align-items-center">
-                <img src="src/imgs/ga-scheme.png" alt="ga-scheme" class="rounded-2 mw-100" style="background: #CED8CA; width: fit-content; height: fit-content;">
+                <div class="container d-flex justify-content-center justify-content-lg-end align-items-center">
+                    <img src="src/imgs/ga-scheme.png" alt="ga-scheme" class="rounded-2 mw-100" style="background: #CED8CA; width: fit-content; height: fit-content;">
+                </div>
             </div>
         </section>
-        <h2 class="h2">Изучение используемых модулей</h2>
-        <p>
-            В работе мы использовали 3 основых модуля <a href="https://www.pymunk.org/en/latest/">Pymunk</a>, 
-            <a href="https://pygad.readthedocs.io/en/latest/">PyGAD</a> и 
-            <a href="https://www.pygame.org/">PyGame </a> 
-        </p>
-        <p>
-            Начали написание кода с объекта нашего приложения
-        </p>
-        <label for="__init__">Код __init__.py</label>
-        <pre class="code-block rounded-3" id="__init__" style="height: 50vh;" data-file-link="https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py">loading...</pre>
-        <p>
-            Рассмотри метод __init__ который будет отвечать за инициализацию нашего приложения
-        </p>
-        <pre class="code-block bg-dark rounded-3 p-2"
-        data-file-link="https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py" 
-        data-slice-start=34
-        data-slice-end=64
-        ></pre>
+
+        <section>
+            <h2 class="h2" id="modules">Изучение используемых модулей</h2>
+            <p>
+                В работе мы использовали 3 основых модуля <a href="https://www.pymunk.org/en/latest/">Pymunk</a>, 
+                <a href="https://pygad.readthedocs.io/en/latest/">PyGAD</a> и 
+                <a href="https://www.pygame.org/">PyGame </a>
+            </p>
+            <p class="h-100">
+                Начали написание кода с объекта нашего приложения
+            </p>
+            <label for="__init__">Код __init__.py</label>
+            <pre class="code-block" id="__init__" data-file-link="https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py">loading...</pre>
+            <p>
+                Рассмотри метод __init__ который будет отвечать за инициализацию нашего приложения
+            </p>
+            <label for="method_init">Метод __init__</label>
+            <pre class="code-block" 
+                data-file-link="https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py"
+                data-slice-start = 34
+                data-slice-end = 64
+                id="method_init"
+            ></pre>
+            <p>
+                Он отвечает за создание окна, физического окружения, обработкой аргументов приходящих с консоли, 
+                а также инициализацию необходимых полей для работы программы. 
+            </p>
+            <p>
+                Также важными и необходимыми к рассмотрению, являются методы draw и iter.
+            </p>
+            <label for="method-draw">Метод draw</label>
+            <pre
+                class="code-block" 
+                data-file-link="https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py"
+                data-slice-start=93
+                data-slice-end=102
+                id="method-draw"
+            ></pre>
+            <label for="method-iter">Метод iter</label>
+            <pre
+                class="code-block"
+                data-file-link="https:\/\/raw.githubusercontent.com/Halone228/GeneticAlgorithm/main/simul/__init__.py"
+                data-slice-start=104
+                data-slice-end=126
+                id="method-iter"
+            ></pre>
+            <p>
+                Разберём эти методы. 
+            </p>
+        </section>
     </main>
 </body>
 </html>

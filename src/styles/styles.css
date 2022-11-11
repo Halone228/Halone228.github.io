@@ -1,22 +1,29 @@
-a {
-  text-decoration: none;
-}
-
-main {
-  z-index: 1;
-}
-
 main a {
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 5px;
+  text-decoration: none;
   color: #648f52;
   background: #191919;
   transition: 0.2s all ease;
   padding: 0 0.25em;
 }
-main a :hover {
+main a > span {
+  color: #648f52;
+  background: #191919;
+  transition: inherit;
+  border-radius: 7px;
+}
+main a:hover {
   color: #191919;
   background: #648f52;
+}
+main a:hover > span {
+  color: #191919;
+  background: #648f52;
+}
+
+main {
+  z-index: 1;
 }
 
 body {
@@ -34,6 +41,9 @@ details summary > i {
 }
 details[open] i {
   transform: rotate(90deg);
+}
+details > p {
+  line-height: 1.2;
 }
 
 @-webkit-keyframes spin {
@@ -166,4 +176,32 @@ pre::-webkit-scrollbar-thumb {
 }
 .star:after {
   transform: rotate(35deg);
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.code-block {
+  max-height: 50vh;
+  font-size: 14px;
+}
+
+.defenition {
+  background-color: rgba(41, 63, 42, 0.5);
+  padding: 1em;
+}
+.defenition a {
+  background: 0;
+}
+
+p {
+  padding-left: 1em;
+  line-height: 0.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu";
+  letter-spacing: 0.7px;
+}
+
+label {
+  font-size: 20px;
+  color: #a3a3a3;
+}
