@@ -1,4 +1,3 @@
-let getted = {}
 
 const add_to_element = (el, html, slice) => {
     let parser = new DOMParser(),
@@ -10,16 +9,14 @@ const add_to_element = (el, html, slice) => {
         hljs.highlightElement(el.childNodes[0])
 }
 const get_file = (url, el, slice=[]) => {
-    if(getted[url]!==undefined) {add_to_element(el,getted[url], slice);}
-    else {
-        fetch(url).then(response => response.text())
-        .then(html => {
-            getted[url] = html;
-            add_to_element(el, html,slice);
-        }).catch(err => {
-            console.warn(err)
-        })
-    }
+
+    fetch(url).then(response => response.text())
+    .then(html => {
+        add_to_element(el, html,slice);
+    }).catch(err => {
+        console.warn(err)
+    })
+    
 }
 
 window.onload = () => {
