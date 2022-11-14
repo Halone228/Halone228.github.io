@@ -1,3 +1,106 @@
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg) scaleX(0.7);
+  }
+  50% {
+    transform: rotate(180deg) scaleX(0.7);
+  }
+  to {
+    transform: rotate(360deg) scaleX(0.7);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scaleX(0.7);
+  }
+  50% {
+    transform: rotate(180deg) scaleX(0.7);
+  }
+  to {
+    transform: rotate(360deg) scaleX(0.7);
+  }
+}
+pre::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+  background-color: #444444;
+}
+
+pre::-webkit-scrollbar, body::-webkit-scrollbar-track {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #50a130;
+  border: 5px solid transparent;
+  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent);
+}
+
+body {
+  background: #191919;
+}
+
+p {
+  padding-left: 1em;
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu";
+  letter-spacing: 0.7px;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-top: 3rem;
+}
+
+details summary {
+  display: flex;
+  align-items: center;
+}
+details summary > i {
+  font-size: 1.25em;
+  margin-right: 0.7em;
+  transition: 0.17s transform ease;
+}
+details[open] i {
+  transform: rotate(90deg);
+}
+details > p {
+  line-height: 1.2;
+}
+
+label {
+  width: 100%;
+  text-align: start;
+  font-size: 20px;
+  color: #a3a3a3;
+}
+
+pre {
+  overflow-x: auto;
+  text-align: start;
+}
+
+code {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+section > center > div {
+  min-width: 15em;
+  max-width: 30em;
+}
+
+main {
+  z-index: 1;
+}
 main a {
   display: inline-block;
   border-radius: 5px;
@@ -22,53 +125,6 @@ main a:hover > span {
   background: #648f52;
 }
 
-main {
-  z-index: 1;
-}
-
-body {
-  background: #191919;
-}
-
-details summary {
-  display: flex;
-  align-items: center;
-}
-details summary > i {
-  font-size: 1.25em;
-  margin-right: 0.7em;
-  transition: 0.17s transform ease;
-}
-details[open] i {
-  transform: rotate(90deg);
-}
-details > p {
-  line-height: 1.2;
-}
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg) scaleX(0.7);
-  }
-  50% {
-    transform: rotate(180deg) scaleX(0.7);
-  }
-  to {
-    transform: rotate(360deg) scaleX(0.7);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg) scaleX(0.7);
-  }
-  50% {
-    transform: rotate(180deg) scaleX(0.7);
-  }
-  to {
-    transform: rotate(360deg) scaleX(0.7);
-  }
-}
 #background {
   position: fixed;
   width: 100vw;
@@ -82,8 +138,6 @@ details > p {
 }
 #background > .circle {
   transform: none;
-  width: 0;
-  height: 0;
   transition: inherit;
   border-radius: 50%;
   position: absolute;
@@ -126,42 +180,22 @@ details > p {
   height: 3em;
   transition-timing-function: cubic-bezier(0.38, 0.5, 0.14, 1.06);
 }
-
-pre::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
-  background-color: #444444;
-}
-
-pre::-webkit-scrollbar {
-  width: 12px;
-  background-color: #F5F5F5;
-}
-
-pre::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #50a130;
-  border: 5px solid transparent;
-  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent);
-}
-
-.star {
+#background .star {
   position: absolute;
   left: 0;
   top: 0;
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 0.9em;
-  margin-right: 0.9em;
-  margin-bottom: 1.2em;
+  font-size: 15em;
+  margin: 0 0.9em 1.2em 0.9em;
   border-right: 0.3em solid transparent;
   border-bottom: 0.7em solid #648f52;
   border-left: 0.3em solid transparent;
-  font-size: 15em;
   filter: blur(30px);
   transform: rotate(35deg);
 }
-.star:before, .star:after {
+#background .star:before, #background .star:after {
   content: "";
   display: block;
   width: 0;
@@ -174,12 +208,13 @@ pre::-webkit-scrollbar-thumb {
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
-.star:after {
+#background .star:after {
   transform: rotate(35deg);
 }
 
 .code-block {
   max-height: 50vh;
+  max-width: 60em;
   font-size: 14px;
 }
 
@@ -189,19 +224,4 @@ pre::-webkit-scrollbar-thumb {
 }
 .defenition a {
   background: 0;
-}
-
-p {
-  padding-left: 1em;
-  line-height: 0.8;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Ubuntu";
-  letter-spacing: 0.7px;
-}
-
-label {
-  font-size: 20px;
-  color: #a3a3a3;
-}
+}/*# sourceMappingURL=styles.css.map */
