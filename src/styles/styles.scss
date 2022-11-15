@@ -58,6 +58,9 @@ h1{
 section{
     margin-top: 3rem;
 }
+.row{
+    margin-left: 0;
+}
 
 details{
     summary{
@@ -232,5 +235,11 @@ main {
     padding: 1em;
     a {
         background: 0;
+    }
+}
+
+@media (min-width:576px){
+    .fs-sm-4{
+        font-size: 1.5rem !important;
     }
 }
