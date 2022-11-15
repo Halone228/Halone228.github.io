@@ -36,7 +36,7 @@ pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-track
     border-radius: 10px;
     background-color: $link-text-hover;
     border: 5px solid transparent;
-    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent)
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent) 
 }
 
 
@@ -95,7 +95,7 @@ code {
 }
 section > center > div {
     min-width: 15em;
-    max-width: 30em;
+    max-width: 25em;
 }
 
 
@@ -159,8 +159,8 @@ main {
             font-size: 4em;
         }
         &.big{
-            width: 100rem;
-            height: 100rem;
+            width: 70rem;
+            height: 70rem;
         }
         
         &.green{ background: $bg-green; }
@@ -169,7 +169,7 @@ main {
         &.compr-x{ transform: scaleX(.7);}
         &.compr-y{ transform: scaleY(.6);}
 
-        &.wide-x{ transform: scaleX(1.7);}
+        &.wide-x{ transform: scaleX(1.9) scaleY(0.7);}
         &.wide-y{ transform: scaleY(1.7);}
     }
 
@@ -223,7 +223,7 @@ main {
 
 .code-block{
     max-height: 50vh;
-    max-width: 60em;
+    max-width: 50em;
     font-size: 14px;
 }
 

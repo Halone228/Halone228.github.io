@@ -95,7 +95,7 @@ code {
 
 section > center > div {
   min-width: 15em;
-  max-width: 30em;
+  max-width: 25em;
 }
 
 main {
@@ -152,8 +152,8 @@ main a:hover > span {
   font-size: 4em;
 }
 #background > .circle.big {
-  width: 100rem;
-  height: 100rem;
+  width: 70rem;
+  height: 70rem;
 }
 #background > .circle.green {
   background: #2d8809;
@@ -168,7 +168,7 @@ main a:hover > span {
   transform: scaleY(0.6);
 }
 #background > .circle.wide-x {
-  transform: scaleX(1.7);
+  transform: scaleX(1.9) scaleY(0.7);
 }
 #background > .circle.wide-y {
   transform: scaleY(1.7);
@@ -214,7 +214,7 @@ main a:hover > span {
 
 .code-block {
   max-height: 50vh;
-  max-width: 60em;
+  max-width: 50em;
   font-size: 14px;
 }
 
@@ -224,4 +224,4 @@ main a:hover > span {
 }
 .defenition a {
   background: 0;
-}/*# sourceMappingURL=styles.css.map */
+}
