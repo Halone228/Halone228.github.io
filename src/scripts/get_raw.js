@@ -27,7 +27,7 @@ window.onload = () => {
         if(el.hasAttribute('data-slice-start')){
             let slice = [ el.getAttribute('data-slice-start'), el.getAttribute('data-slice-end') ]
             get_file(link,el,slice)
-        } else{
+        } else {
             get_file(link, el)
         }
     } )
