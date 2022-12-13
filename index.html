@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-6 d-flex justify-content-center">
                     <a href="https://github.com/Halone228" class="p-3 text-center d-flex flex-column justify-content-between align-items-center" style="width: fit-content;">
-                        <img class="rounded-circle overflow-hidden mb-3" src="https://avatars.githubusercontent.com/u/75622442?v=4" style="height: 5em; width: fit-content;">
+                        <img class="rounded-circle overflow-hidden mb-3" src="https://avatars.githubusercontent.com/u/75622442?v=4" style="height: 5em;">
                         <span> @Halone228 </span>
                     </a>
                 </div>
@@ -238,6 +238,22 @@
                 Данные методы отвечают за итерацию программного цикла, обработку нажатий c клавиатуры,
                 a также за отрисовку в окне.
             </p>
+            <p>
+                Программный цикл будет не главным. Главный цикл будет управлятся модулем PyGAD, сделали мы так,
+                чтобы избежать многопоточности и возможных обращений разными потоками к одной переменной и последующими
+                ошибками. Это является не самой лучшей практикой, однако в нашем случае это необходимо.
+            </p>
+            <p>
+                Наше приложение будет связано с генетическим алгоритмом с помощью класса <code>AgentManager</code>
+            </p>
+            <label for="agent-manager-file">AgentManager.py</label>
+            <pre
+                class="code-block"
+                data-file-link="https:\/\/raw.githubusercontent.com\/Halone228\/GeneticAlgorithm\/main\/simul\/AgentManager.py"
+                id="agent-manager-file"
+            >
+
+            </pre>
         </section>
 
 <section>
